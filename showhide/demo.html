@@ -1,0 +1,23 @@
+<body>
+    <label><input id="yes" type="radio" name="display" value="yes" checked> Yes </label>
+    <label><input id="no" type="radio" name="display" value="no"> No  </label>
+
+    <div id="extras" style="background: silver;padding: 3em">Extras</div>
+</body>
+<script>
+    const extras = document.getElementById("extras");
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+
+    function onChanged(){
+        // let value = "block";
+        // if(no.checked){
+        //     value = "none";
+        // }
+        // extras.style.display = value;
+        extras.style.display = no.checked ?  "none" : "block";
+    }
+
+    yes.addEventListener("change", onChanged);
+    no.addEventListener("change", onChanged);
+</script>
