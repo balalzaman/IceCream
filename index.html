@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="test.js"></script>
+    <script src="main.js"></script>
+</head>
+    <h2>Ice Cream Shop</h2>
+    <label>
+    <br>
+        Number of scoops <input type="number" id="scoops" value="1">
+    <br>
+        <label><input name="container" value="no" type="radio"> Cone </label>
+        <label><input id="container" value="yes" type="radio" checked> Cup </label>
+    <br>
+    <fieldset>
+        <legend>Toppings</legend>
+        <br>
+            <label><input id="sprinkles" type="checkbox">Sprinkles ($0.50)</label>
+            <label><input id="whippedCream" type="checkbox">Whipped Cream ($0.25)</label>
+            <label><input id="hotFudge" type="checkbox">Hot Fudge ($1.25)</label>
+            <label><input id="cherry" type="checkbox">Cherry ($0.25)</label>
+    </fieldset>
+    <p><button id="submit">Submit Order</button></p>
+    <table id="output">
+        <tr><th>Base Price: </th><td id="iceCreamCost"> $0.00</td></tr>
+        <tr><th>Tax: </th><td id="taxAmount"> $0.00</td></tr>
+        <tr><th>Total Due: </th><td id="totalDue"> $0.00</td></tr>
+    </table>
+
+</fieldset>
+    
+</body>
+</html>
