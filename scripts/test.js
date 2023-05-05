@@ -6,7 +6,7 @@ function calculate(
         wantsWhippedCream,
         wantsCherry,
     ) {
-        taxRate = 0.035
+        RATE = 0.01
         let price = 1 + (1.25 * scoopCount);
         if(isCup){
             price += wantsSprinkles ? 0.50 : 0;
@@ -14,7 +14,7 @@ function calculate(
             price += wantsWhippedCream ? 0.25 : 0;
             price += wantsCherry ? 0.25 : 0;
     }
-    const tax = price * taxRate;     
+    const tax = price * RATE;     
     const total = price + tax;
     return { //new object
         price: price,

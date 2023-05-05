@@ -6,34 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
     <link rel="stylesheet" href="main.css">
-    <script src="test.js"></script>
-    <script src="main.js"></script>
+    <script src="scripts/test.js"></script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
-    
     <h2>Ice Cream Shop</h2>
     <label>
-    <br>
-        Number of scoops <input type="number" id="scoops" value="1" min="1" max="4">
-    <br>
-        <label><input name="container" value="cone" type="radio"> Cone </label>
-        <label><input id="container" value="cup" type="radio" checked> Cup </label>
+        Number of scoops: <input id="scoops" value="1" type="number" min="1" max="4">
+    </label><br>
+        <label><input type="radio" name="choice" value="cone" id="cone"> Cone </label>
+        <label><input type="radio" name="choice" value="cup" id="cup" checked> Cup </label>
     <br>
     <fieldset id="toppings">
         <h3>Toppings</h3>
-            <label><input id="sprinkles" type="checkbox">Sprinkles ($0.50)</label>
-            <label><input id="whippedCream" type="checkbox">Whipped Cream ($0.25)</label>
-            <label><input id="hotFudge" type="checkbox">Hot Fudge ($1.25)</label>
-            <label><input id="cherry" type="checkbox">Cherry ($0.25)</label>
+            <label><input type="checkbox" id="sprinkles">Sprinkles ($0.50)</label>
+            <label><input type="checkbox" id="whippedCream">Whipped Cream ($0.25)</label>
+            <label><input type="checkbox" id="hotFudge">Hot Fudge ($1.25)</label>
+            <label><input type="checkbox" id="cherry">Cherry ($0.25)</label>
     </fieldset>
-    <p><button id="submit">Submit Order</button></p>
+    <p><button id="order">Submit Order</button></p>
     <table id="output">
-        <tr><th>Base Price: </th><td id="iceCreamCost"> $0.00</td></tr>
-        <tr><th>Tax: </th><td id="taxAmount"> $0.00</td></tr>
-        <tr><th>Total Due: </th><td id="totalDue"> $0.00</td></tr>
+        <tr><th>Base Price: </th><td id="price"> $0.00</td></tr>
+        <tr><th>Tax: </th><td id="tax"> $0.00</td></tr>
+        <tr><th>Total Due: </th><td id="total"> $0.00</td></tr>
     </table>
-
-</fieldset>
     
 </body>
 </html>
