@@ -1,26 +1,43 @@
-//window.onload
+document.addEventListener("DOMContentLoaded", (()=>{
 
-document.addEventListener("DOMContentLoaded", () => {
     const scoops = document.getElementById("scoops");
-    const container = document.getElementById("container"); //YES
+    const cone = document.getElementById("cone");
+    const cup = document.getElementById("cup");
 
+    const toppings = document.getElementById("toppings");
 
     const sprinkles = document.getElementById("sprinkles");
     const whippedCream = document.getElementById("whippedCream");
     const hotFudge = document.getElementById("hotFudge");
     const cherry = document.getElementById("cherry");
+
     const output = document.getElementById("output");
 
-    estimate.addEventListener("click",()=>{
-        const iceCreamResults = getIceCreamData(
+    const price = document.getElementById("price");
+    const tax = document.getElementById("tax");
+    const total = document.getElementById("total")
+
+    function updateToppings(){
+        toppings.style.display = cup.checked ? 'block' : 'none';
+    }
+
+    cone.addEventListener("change", updateToppings);
+    cup.addEventListener("change", updateToppings)
+    
+    output.addEventListener ("click",()=>{
+        const iceCreamResults = calculate(
             Number(scoops.value),
-            container.checked,
+            cup.checked,
             sprinkles.checked,
             whippedCream.checked,
             hotFudge.checked,
             cherry.checked,
         )
-        output.innerHTML = getTextResults(iceCreamResults);
-    });//end estimate click
 
-});//end DOM Content Loaded
+        price.innerHTML = dollars(results.price);
+        tax.innerHTML = dollars(results.tax);
+        total.innerHTML = dollars(results.total);
+
+    });//end click
+
+}));//end Loaded

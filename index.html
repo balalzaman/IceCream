@@ -9,17 +9,18 @@
     <script src="test.js"></script>
     <script src="main.js"></script>
 </head>
+<body>
+    
     <h2>Ice Cream Shop</h2>
     <label>
     <br>
-        Number of scoops <input type="number" id="scoops" value="1">
+        Number of scoops <input type="number" id="scoops" value="1" min="1" max="4">
     <br>
-        <label><input name="container" value="no" type="radio"> Cone </label>
-        <label><input id="container" value="yes" type="radio" checked> Cup </label>
+        <label><input name="container" value="cone" type="radio"> Cone </label>
+        <label><input id="container" value="cup" type="radio" checked> Cup </label>
     <br>
-    <fieldset>
-        <legend>Toppings</legend>
-        <br>
+    <fieldset id="toppings">
+        <h3>Toppings</h3>
             <label><input id="sprinkles" type="checkbox">Sprinkles ($0.50)</label>
             <label><input id="whippedCream" type="checkbox">Whipped Cream ($0.25)</label>
             <label><input id="hotFudge" type="checkbox">Hot Fudge ($1.25)</label>

@@ -1,51 +1,32 @@
-function getRateData(scoops, sprinkles, whippedCream, hotFudge, cherry) {
-    //OUTPUT VARIABLES
-    let iceCreamCost = 0;
-    let toppingsAmount = 0;
-    let totalDue = 0;
-    let tax = 0.03
-
-    //LOGIC
-    iceCreamCost = (2.25 + (1.25 * scoops));
-    
-    if(sprinkles){
-        toppingsAmount += 0.50;
+function calculate(
+        scoopCount,
+        isCup,
+        wantsSprinkles,
+        wantsHotFudge,
+        wantsWhippedCream,
+        wantsCherry,
+    ) {
+        taxRate = 0.035
+        let price = 1 + (1.25 * scoopCount);
+        if(isCup){
+            price += wantsSprinkles ? 0.50 : 0;
+            price += wantsHotFudge ? 1.25 : 0;
+            price += wantsWhippedCream ? 0.25 : 0;
+            price += wantsCherry ? 0.25 : 0;
     }
-    if(whippedCream){
-        toppingsAmount += 0.25;
-    }
-    if(hotFudge){
-        toppingsAmount += 1.25;
-    }
-    if(cherry){
-        toppingsAmount += 0.25;
-    }
-
-
-    basePrice = iceCreamCost + toppingsAmount;
-    taxAmount = tax * basePrice;
-    totalDue = basePrice + taxAmount;
-
-    //RETURN OBJECT WITH OUTPUT VARIABLE AS PROPERTIES
-    return {
-        iceCreamCost: iceCreamCost,
-        toppingsAmount: toppingsAmount,
-        taxAmount: taxAmount,
-        totalDue: totalDue,
+    const tax = price * taxRate;     
+    const total = price + tax;
+    return { //new object
+        price: price,
+        tax: tax,
+        total: total,
     }
 }
 
-//TEST 
-function getTextResults(iceCreamResults){
-    return `
-        Base price:             $${iceCreamResults.iceCreamCost.toFixed(2)}
-        Toppings:               $${iceCreamResults.toppingsAmount.toFixed(2)}
-        Tax:                    $${iceCreamResults.taxAmount.toFixed(2)}
-        Total Due:              $${iceCreamResults.totalDue.toFixed(2)}
-     `;
+function dollars(amount){
+    return `$${amount.toFixed(2)}`;
 }
 
-console.log(getTextResults(getRateData( 1, true, true, true, true)));
-console.log(getTextResults(getRateData( 0, false, false, false, false)));
-
-// window.onload = ONLY GOOD FOR ONE LISTENER
+//TEST
+console.log(calculate(2,true,true,true,true,true));
+console.log(calculate(2,false,false,false,false,false));
