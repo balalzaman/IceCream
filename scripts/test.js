@@ -6,7 +6,7 @@ function calculate(
         wantsWhippedCream,
         wantsCherry,
     ) {
-        RATE = 0.01
+        RATE = 0.10
         let price = 1 + (1.25 * scoopCount);
         if(isCup){
             price += wantsSprinkles ? 0.50 : 0;

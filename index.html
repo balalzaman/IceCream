@@ -9,16 +9,24 @@
     <script src="scripts/test.js"></script>
     <script src="scripts/main.js"></script>
 </head>
+
+<br>
+<main role="main">
+    <div class="container">
+       <h1 class="fw-bolder py-5 text-center">I Scream for Ice Cream <h1>
+    </div>
+</main>
+
 <body>
-    <h2>Ice Cream Shop</h2>
     <label>
-        Number of scoops: <input id="scoops" value="1" type="number" min="1" max="4">
+        <h3>Number of scoops: <input id="scoops" value="1" type="number" min="1" max="4"></h3>
     </label><br>
         <label><input type="radio" name="choice" value="cone" id="cone"> Cone </label>
         <label><input type="radio" name="choice" value="cup" id="cup" checked> Cup </label>
     <br>
+
     <fieldset id="toppings">
-        <h3>Toppings</h3>
+        <legend><h3 class="display-1 py-5 text-center">Toppings</h3></legend>
             <label><input type="checkbox" id="sprinkles">Sprinkles ($0.50)</label>
             <label><input type="checkbox" id="whippedCream">Whipped Cream ($0.25)</label>
             <label><input type="checkbox" id="hotFudge">Hot Fudge ($1.25)</label>
@@ -30,6 +38,8 @@
         <tr><th>Tax: </th><td id="tax"> $0.00</td></tr>
         <tr><th>Total Due: </th><td id="total"> $0.00</td></tr>
     </table>
+    <br>
+    <br>
     
 </body>
 </html>

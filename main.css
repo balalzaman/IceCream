@@ -1,7 +1,19 @@
+main{
+    color:black
+}
 body{
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black
 }
+
+body {
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+    background-image: url('../IceCream/images/icecreambackground5.jpg');
+} 
 
 label{
     display: inline-block;
